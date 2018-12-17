@@ -1,0 +1,10 @@
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Falsetto, Benjamin (s255212)\RST\PacMan\PacMan\bin\Debug\PacMan.exe.config
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Falsetto, Benjamin (s255212)\RST\PacMan\PacMan\bin\Debug\PacMan.exe
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Falsetto, Benjamin (s255212)\RST\PacMan\PacMan\bin\Debug\PacMan.pdb
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Falsetto, Benjamin (s255212)\RST\PacMan\PacMan\obj\Debug\PacMan.csprojAssemblyReference.cache
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Falsetto, Benjamin (s255212)\RST\PacMan\PacMan\obj\Debug\PacMan.PacManForm.resources
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Falsetto, Benjamin (s255212)\RST\PacMan\PacMan\obj\Debug\PacMan.Properties.Resources.resources
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Falsetto, Benjamin (s255212)\RST\PacMan\PacMan\obj\Debug\PacMan.csproj.GenerateResource.cache
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Falsetto, Benjamin (s255212)\RST\PacMan\PacMan\obj\Debug\PacMan.csproj.CoreCompileInputs.cache
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Falsetto, Benjamin (s255212)\RST\PacMan\PacMan\obj\Debug\PacMan.exe
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Falsetto, Benjamin (s255212)\RST\PacMan\PacMan\obj\Debug\PacMan.pdb
