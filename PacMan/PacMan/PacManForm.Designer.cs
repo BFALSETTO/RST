@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pacman = new System.Windows.Forms.PictureBox();
-            this.pinkGhost = new System.Windows.Forms.PictureBox();
-            this.yellowGhost = new System.Windows.Forms.PictureBox();
-            this.redGhost = new System.Windows.Forms.PictureBox();
+            this.picPacman = new System.Windows.Forms.PictureBox();
+            this.picPinkGhost = new System.Windows.Forms.PictureBox();
+            this.picYellowGhost = new System.Windows.Forms.PictureBox();
+            this.picRedGhost = new System.Windows.Forms.PictureBox();
             this.picWall2 = new System.Windows.Forms.PictureBox();
             this.picWall4 = new System.Windows.Forms.PictureBox();
             this.picWall3 = new System.Windows.Forms.PictureBox();
@@ -69,11 +69,11 @@
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pacman)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pinkGhost)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yellowGhost)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.redGhost)).BeginInit();
+            this.tmrTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.picPacman)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPinkGhost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picYellowGhost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRedGhost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
@@ -110,45 +110,45 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             this.SuspendLayout();
             // 
-            // pacman
+            // picPacman
             // 
-            this.pacman.Image = global::PacMan.Properties.Resources.Right;
-            this.pacman.Location = new System.Drawing.Point(12, 245);
-            this.pacman.Name = "pacman";
-            this.pacman.Size = new System.Drawing.Size(40, 40);
-            this.pacman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pacman.TabIndex = 7;
-            this.pacman.TabStop = false;
+            this.picPacman.Image = global::PacMan.Properties.Resources.Right;
+            this.picPacman.Location = new System.Drawing.Point(12, 245);
+            this.picPacman.Name = "picPacman";
+            this.picPacman.Size = new System.Drawing.Size(40, 40);
+            this.picPacman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPacman.TabIndex = 7;
+            this.picPacman.TabStop = false;
             // 
-            // pinkGhost
+            // picPinkGhost
             // 
-            this.pinkGhost.Image = global::PacMan.Properties.Resources.pink_guy;
-            this.pinkGhost.Location = new System.Drawing.Point(426, 383);
-            this.pinkGhost.Name = "pinkGhost";
-            this.pinkGhost.Size = new System.Drawing.Size(36, 38);
-            this.pinkGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pinkGhost.TabIndex = 6;
-            this.pinkGhost.TabStop = false;
+            this.picPinkGhost.Image = global::PacMan.Properties.Resources.pink_guy;
+            this.picPinkGhost.Location = new System.Drawing.Point(426, 383);
+            this.picPinkGhost.Name = "picPinkGhost";
+            this.picPinkGhost.Size = new System.Drawing.Size(36, 38);
+            this.picPinkGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPinkGhost.TabIndex = 6;
+            this.picPinkGhost.TabStop = false;
             // 
-            // yellowGhost
+            // picYellowGhost
             // 
-            this.yellowGhost.Image = global::PacMan.Properties.Resources.yellow_guy;
-            this.yellowGhost.Location = new System.Drawing.Point(108, 383);
-            this.yellowGhost.Name = "yellowGhost";
-            this.yellowGhost.Size = new System.Drawing.Size(36, 38);
-            this.yellowGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.yellowGhost.TabIndex = 5;
-            this.yellowGhost.TabStop = false;
+            this.picYellowGhost.Image = global::PacMan.Properties.Resources.yellow_guy;
+            this.picYellowGhost.Location = new System.Drawing.Point(108, 383);
+            this.picYellowGhost.Name = "picYellowGhost";
+            this.picYellowGhost.Size = new System.Drawing.Size(36, 38);
+            this.picYellowGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picYellowGhost.TabIndex = 5;
+            this.picYellowGhost.TabStop = false;
             // 
-            // redGhost
+            // picRedGhost
             // 
-            this.redGhost.Image = global::PacMan.Properties.Resources.red_guy;
-            this.redGhost.Location = new System.Drawing.Point(210, 116);
-            this.redGhost.Name = "redGhost";
-            this.redGhost.Size = new System.Drawing.Size(36, 38);
-            this.redGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.redGhost.TabIndex = 4;
-            this.redGhost.TabStop = false;
+            this.picRedGhost.Image = global::PacMan.Properties.Resources.red_guy;
+            this.picRedGhost.Location = new System.Drawing.Point(210, 116);
+            this.picRedGhost.Name = "picRedGhost";
+            this.picRedGhost.Size = new System.Drawing.Size(36, 38);
+            this.picRedGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRedGhost.TabIndex = 4;
+            this.picRedGhost.TabStop = false;
             // 
             // picWall2
             // 
@@ -540,14 +540,15 @@
             this.label2.TabIndex = 38;
             this.label2.Text = "label2";
             // 
-            // timer1
+            // tmrTimer
             // 
-            this.timer1.Interval = 20;
+            this.tmrTimer.Interval = 20;
             // 
             // PacManForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(609, 531);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -581,10 +582,10 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pacman);
-            this.Controls.Add(this.pinkGhost);
-            this.Controls.Add(this.yellowGhost);
-            this.Controls.Add(this.redGhost);
+            this.Controls.Add(this.picPacman);
+            this.Controls.Add(this.picPinkGhost);
+            this.Controls.Add(this.picYellowGhost);
+            this.Controls.Add(this.picRedGhost);
             this.Controls.Add(this.picWall2);
             this.Controls.Add(this.picWall4);
             this.Controls.Add(this.picWall3);
@@ -595,10 +596,10 @@
             this.Load += new System.EventHandler(this.PacManForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
-            ((System.ComponentModel.ISupportInitialize)(this.pacman)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pinkGhost)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.yellowGhost)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.redGhost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPacman)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPinkGhost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picYellowGhost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRedGhost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).EndInit();
@@ -644,10 +645,10 @@
         private System.Windows.Forms.PictureBox picWall3;
         private System.Windows.Forms.PictureBox picWall4;
         private System.Windows.Forms.PictureBox picWall2;
-        private System.Windows.Forms.PictureBox redGhost;
-        private System.Windows.Forms.PictureBox yellowGhost;
-        private System.Windows.Forms.PictureBox pinkGhost;
-        private System.Windows.Forms.PictureBox pacman;
+        private System.Windows.Forms.PictureBox picRedGhost;
+        private System.Windows.Forms.PictureBox picYellowGhost;
+        private System.Windows.Forms.PictureBox picPinkGhost;
+        private System.Windows.Forms.PictureBox picPacman;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -680,7 +681,7 @@
         private System.Windows.Forms.PictureBox pictureBox30;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer tmrTimer;
     }
 }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace PacMan
 {
@@ -17,14 +18,9 @@ namespace PacMan
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void frmSplashScreen_Load(object sender, EventArgs e)
         {
-            using (var frmPacMan = new PacManForm())
-            {
-                this.Hide();
-                frmPacMan.ShowDialog();
-                this.Close();
-            }
+
         }
     }
 }

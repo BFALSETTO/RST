@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace PacMan
 {
@@ -38,25 +39,25 @@ namespace PacMan
             if (e.KeyCode == Keys.Left)
             {
                 goLeft = true;
-                pacman.Image = Properties.Resources.Left;
+                picPacman.Image = Properties.Resources.Left;
             }
 
             if (e.KeyCode == Keys.Right)
             {
                 goRight = true;
-                pacman.Image = Properties.Resources.Right;
+                picPacman.Image = Properties.Resources.Right;
             }
 
             if (e.KeyCode == Keys.Up)
             {
                 goUp = true;
-                pacman.Image = Properties.Resources.Up;
+                picPacman.Image = Properties.Resources.Up;
             }
 
             if (e.KeyCode == Keys.Down)
             {
                 goDown = true;
-                pacman.Image = Properties.Resources.down;
+                picPacman.Image = Properties.Resources.down;
             }
         }
 
@@ -92,29 +93,110 @@ namespace PacMan
             if (goLeft)
             {
                 //move the player to the left
-                pacman.Left -= speed;
+                picPacman.Left -= speed;
             }
             
             if (goRight)
             {
-                pacman.Left += speed;
+                picPacman.Left += speed;
             }
             
             if (goUp)
             {
-                pacman.Top -= speed;
+                picPacman.Top -= speed;
             }
 
             if (goDown)
             {
-                pacman.Top += speed;
+                picPacman.Top += speed;
             }
             //player movements code end
+
+            //moving the ghosts and bumping with the walls
+            picRedGhost.Left += ghost1;
+            picYellowGhost.Left += ghost2;
+
+            //if the red ghost hits the wall then reverse speed
+            if (picRedGhost.Bounds.IntersectsWith(picWall1.Bounds))
+            {
+                ghost1 = -ghost1;
+            }
+            //if the red ghost hits the wall then reverse speed
+            if (picRedGhost.Bounds.IntersectsWith(picWall2.Bounds))
+            {
+                ghost1 = -ghost1;
+            }
+            //if the yellow ghost hits the wall then reverse speed
+            if (picYellowGhost.Bounds.IntersectsWith(picWall1.Bounds))
+            {
+               ghost2 = -ghost2;
+            }
+            //if the yellow ghost hits the wall then reverse speed
+            if (picYellowGhost.Bounds.IntersectsWith(picWall2.Bounds))
+            {
+                ghost2 = -ghost2;
+            }
+
+            //for loop to check walls ghosts and points
+            foreach (Control atag in this.Controls)
+            {
+                if (atag is PictureBox && atag.Tag == "wall" || atag.Tag == "ghost")
+                {
+                    //checking if the player hits the wall or the ghost, them game over
+                    if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds) || score == 30)
+                    {
+                        picPacman.Left = 0;
+                        picPacman.Top = 25;
+                        label2.Text = "GAME OVER";
+                        label2.Show();
+                        tmrTimer.Stop();
+                    }
+                }
+                if (atag is PictureBox && atag.Tag == "coin")
+                {
+                    //checking to see if the player hits the picturebox then add score
+                    if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
+                    {
+                        //remove the point
+                        this.Controls.Remove(atag);
+                        //add to the score
+                        score++;
+                    }
+                }
+            }//end the for loop for checking walls, points and ghosts
+
+            //ghost 3 going crazy here
+            picPinkGhost.Left += ghost3x;
+            picPinkGhost.Top += ghost3y;
+
+            if (picPinkGhost.Left < 1 ||
+                picPinkGhost.Left + picPinkGhost.Width > ClientSize.Width - 2 ||
+                (picPinkGhost.Bounds.IntersectsWith(picWall1.Bounds)) ||
+                (picPinkGhost.Bounds.IntersectsWith(picWall2.Bounds)) ||
+                (picPinkGhost.Bounds.IntersectsWith(picWall3.Bounds)) ||
+                (picPinkGhost.Bounds.IntersectsWith(picWall4.Bounds))
+                )
+            {
+                ghost3x = -ghost3x;
+            }
+            if (picPinkGhost.Top < 1 || picPinkGhost.Top + picPinkGhost.Height > ClientSize.Height - 2)
+            {
+                ghost3y = -ghost3y;
+            }
+            //end crazy ghost movements
         }
 
         private void PacManForm_Load(object sender, EventArgs e)
         {
+            Thread t = new Thread(new ThreadStart(SplashStart));
+            t.Start();
+            Thread.Sleep(5000);
+            t.Abort();
+        }
 
+        public void SplashStart()
+        {
+            Application.Run(new frmSplashScreen());
         }
     }
 }
