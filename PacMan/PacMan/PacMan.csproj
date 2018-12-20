@@ -155,5 +155,14 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unmute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unmute1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

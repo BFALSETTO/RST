@@ -133,6 +133,16 @@ namespace PacMan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Mute {
+            get {
+                object obj = ResourceManager.GetObject("Mute", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pink_guy {
             get {
                 object obj = ResourceManager.GetObject("pink_guy", resourceCulture);
@@ -176,6 +186,26 @@ namespace PacMan.Properties {
         internal static System.Drawing.Bitmap Right11 {
             get {
                 object obj = ResourceManager.GetObject("Right11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Unmute {
+            get {
+                object obj = ResourceManager.GetObject("Unmute", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Unmute1 {
+            get {
+                object obj = ResourceManager.GetObject("Unmute1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

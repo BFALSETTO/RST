@@ -18,7 +18,7 @@ namespace PacMan
     {
         //create the sound player
         private SoundPlayer Sound = new SoundPlayer();
-        
+
         //delcare and initialize variables
         bool goUp = false, goDown = false, goLeft = false, goRight = false;
 
@@ -37,22 +37,29 @@ namespace PacMan
         public PacManForm()
         {
             InitializeComponent();
+            
+            //load sounds and make certain objects invisible
             lblGameOver.Visible = false;
             Sound = new SoundPlayer("1-03 Hymn to Red October.wav");
-            Sound.Play();
+            Console.WriteLine("***Sound Loaded");
+            picUnmute.Hide();
         }
 
         private void keyisdown(object sender, KeyEventArgs e)
         {
             Console.WriteLine("***keyisdown called");
 
+            //if the left arrow key is pressed:
             if (e.KeyCode == Keys.Left)
             {
                 Console.WriteLine("***Keys.Left is pressed");
+                //set goLeft = true
                 goLeft = true;
+                //change the image to the pacman moving left
                 picPacman.Image = Properties.Resources.Left;
             }
 
+            //if the right arrow key is pressed:
             if (e.KeyCode == Keys.Right)
             {
                 Console.WriteLine("***Keys.Right is pressed");
@@ -96,6 +103,20 @@ namespace PacMan
             {
                 goDown = false;
             }
+        }
+
+        private void picMute_Click(object sender, EventArgs e)
+        {
+            Sound.Stop();
+            picMute.Hide();
+            picUnmute.Show();
+        }
+
+        private void picUnmute_Click(object sender, EventArgs e)
+        {
+            Sound.Play();
+            picUnmute.Hide();
+            picMute.Show();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -222,9 +243,20 @@ namespace PacMan
         private void PacManForm_Load(object sender, EventArgs e)
         {
             Thread t = new Thread(new ThreadStart(SplashStart));
-            Thread.Sleep(5000);
             t.Start();
+            Console.WriteLine("Waiting for 5 seconds");
+            Thread.Sleep(1000);
+            Console.WriteLine("Waiting for 4 seconds");
+            Thread.Sleep(1000);
+            Console.WriteLine("Waiting for 3 seconds");
+            Thread.Sleep(1000);
+            Console.WriteLine("Waiting for 2 seconds");
+            Thread.Sleep(1000);
+            Console.WriteLine("Waiting for 1 second");
+            Thread.Sleep(1000);
+            Console.WriteLine("Loading main game");
             t.Abort();
+            Sound.Play();
         }
 
         public void SplashStart()

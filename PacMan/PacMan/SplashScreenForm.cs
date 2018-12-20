@@ -20,7 +20,7 @@ namespace PacMan
 
         private void frmSplashScreen_Load(object sender, EventArgs e)
         {
-
+            Console.WriteLine("Form Loaded");
         }
     }
 }
