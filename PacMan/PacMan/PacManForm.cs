@@ -7,16 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//need threading for Thread.Sleep for my splash screen
 using System.Threading;
+//need media for SoundPlayer
+using System.Media;
 
 namespace PacMan
 {
     public partial class PacManForm : Form
     {
+        //create the sound player
+        private SoundPlayer Sound = new SoundPlayer();
+        
         //delcare and initialize variables
-        bool goUp, goDown, goLeft, goRight;
+        bool goUp = false, goDown = false, goLeft = false, goRight = false;
 
-        int speed = 5;
+        int speed = 8;
 
         //ghost 1 and 2 variables 
         int ghost1 = 8;
@@ -31,31 +37,39 @@ namespace PacMan
         public PacManForm()
         {
             InitializeComponent();
-            label2.Visible = false;
+            lblGameOver.Visible = false;
+            Sound = new SoundPlayer("1-03 Hymn to Red October.wav");
+            Sound.Play();
         }
 
         private void keyisdown(object sender, KeyEventArgs e)
         {
+            Console.WriteLine("***keyisdown called");
+
             if (e.KeyCode == Keys.Left)
             {
+                Console.WriteLine("***Keys.Left is pressed");
                 goLeft = true;
                 picPacman.Image = Properties.Resources.Left;
             }
 
             if (e.KeyCode == Keys.Right)
             {
+                Console.WriteLine("***Keys.Right is pressed");
                 goRight = true;
                 picPacman.Image = Properties.Resources.Right;
             }
 
             if (e.KeyCode == Keys.Up)
             {
+                Console.WriteLine("***Keys.Up is pressed");
                 goUp = true;
                 picPacman.Image = Properties.Resources.Up;
             }
 
             if (e.KeyCode == Keys.Down)
             {
+                Console.WriteLine("***Keys.Down is pressed");
                 goDown = true;
                 picPacman.Image = Properties.Resources.down;
             }
@@ -86,8 +100,9 @@ namespace PacMan
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            //Console.WriteLine("***timer1_Tick called");
             //show the score on the board
-            label1.Text = "Score: " + score;
+            lblScore.Text = "Score: " + score;
 
             //player movement code start
             if (goLeft)
@@ -126,13 +141,29 @@ namespace PacMan
             {
                 ghost1 = -ghost1;
             }
+            if (picRedGhost.Bounds.IntersectsWith(picWall3.Bounds))
+            {
+                ghost1 = -ghost1;
+            }
+            if (picRedGhost.Bounds.IntersectsWith(picWall4.Bounds))
+            {
+                ghost1 = -ghost1;
+            }
             //if the yellow ghost hits the wall then reverse speed
             if (picYellowGhost.Bounds.IntersectsWith(picWall1.Bounds))
             {
                ghost2 = -ghost2;
             }
-            //if the yellow ghost hits the wall then reverse speed
             if (picYellowGhost.Bounds.IntersectsWith(picWall2.Bounds))
+            {
+                ghost2 = -ghost2;
+            }
+            //if the yellow ghost hits the wall then reverse speed
+            if (picYellowGhost.Bounds.IntersectsWith(picWall3.Bounds))
+            {
+                ghost2 = -ghost2;
+            }
+            if (picYellowGhost.Bounds.IntersectsWith(picWall4.Bounds))
             {
                 ghost2 = -ghost2;
             }
@@ -147,9 +178,10 @@ namespace PacMan
                     {
                         picPacman.Left = 0;
                         picPacman.Top = 25;
-                        label2.Text = "GAME OVER";
-                        label2.Show();
+                        lblGameOver.Text = "GAME OVER";
+                        lblGameOver.Show();
                         tmrTimer.Stop();
+                        picPacman.Hide();
                     }
                 }
                 if (atag is PictureBox && atag.Tag == "coin")
@@ -161,6 +193,7 @@ namespace PacMan
                         this.Controls.Remove(atag);
                         //add to the score
                         score++;
+                        Console.WriteLine("***Score is " + score);
                     }
                 }
             }//end the for loop for checking walls, points and ghosts
@@ -189,8 +222,8 @@ namespace PacMan
         private void PacManForm_Load(object sender, EventArgs e)
         {
             Thread t = new Thread(new ThreadStart(SplashStart));
-            t.Start();
             Thread.Sleep(5000);
+            t.Start();
             t.Abort();
         }
 

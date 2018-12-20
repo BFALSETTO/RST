@@ -67,8 +67,8 @@
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.lblGameOver = new System.Windows.Forms.Label();
             this.tmrTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picPacman)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPinkGhost)).BeginInit();
@@ -112,6 +112,7 @@
             // 
             // picPacman
             // 
+            this.picPacman.BackColor = System.Drawing.Color.Transparent;
             this.picPacman.Image = global::PacMan.Properties.Resources.Right;
             this.picPacman.Location = new System.Drawing.Point(12, 245);
             this.picPacman.Name = "picPacman";
@@ -122,6 +123,7 @@
             // 
             // picPinkGhost
             // 
+            this.picPinkGhost.BackColor = System.Drawing.Color.Transparent;
             this.picPinkGhost.Image = global::PacMan.Properties.Resources.pink_guy;
             this.picPinkGhost.Location = new System.Drawing.Point(426, 383);
             this.picPinkGhost.Name = "picPinkGhost";
@@ -129,9 +131,11 @@
             this.picPinkGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPinkGhost.TabIndex = 6;
             this.picPinkGhost.TabStop = false;
+            this.picPinkGhost.Tag = "ghost";
             // 
             // picYellowGhost
             // 
+            this.picYellowGhost.Enabled = false;
             this.picYellowGhost.Image = global::PacMan.Properties.Resources.yellow_guy;
             this.picYellowGhost.Location = new System.Drawing.Point(108, 383);
             this.picYellowGhost.Name = "picYellowGhost";
@@ -139,9 +143,11 @@
             this.picYellowGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picYellowGhost.TabIndex = 5;
             this.picYellowGhost.TabStop = false;
+            this.picYellowGhost.Tag = "ghost";
             // 
             // picRedGhost
             // 
+            this.picRedGhost.BackColor = System.Drawing.Color.Transparent;
             this.picRedGhost.Image = global::PacMan.Properties.Resources.red_guy;
             this.picRedGhost.Location = new System.Drawing.Point(210, 116);
             this.picRedGhost.Name = "picRedGhost";
@@ -149,6 +155,7 @@
             this.picRedGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picRedGhost.TabIndex = 4;
             this.picRedGhost.TabStop = false;
+            this.picRedGhost.Tag = "ghost";
             // 
             // picWall2
             // 
@@ -192,6 +199,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox1.Location = new System.Drawing.Point(446, 195);
             this.pictureBox1.Name = "pictureBox1";
@@ -203,8 +211,9 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::PacMan.Properties.Resources.cccc;
-            this.pictureBox2.Location = new System.Drawing.Point(395, 195);
+            this.pictureBox2.Location = new System.Drawing.Point(387, 195);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -214,6 +223,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox3.Location = new System.Drawing.Point(446, 129);
             this.pictureBox3.Name = "pictureBox3";
@@ -225,6 +235,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox4.Location = new System.Drawing.Point(446, 58);
             this.pictureBox4.Name = "pictureBox4";
@@ -236,6 +247,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox5.Location = new System.Drawing.Point(387, 129);
             this.pictureBox5.Name = "pictureBox5";
@@ -247,6 +259,7 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox6.Location = new System.Drawing.Point(387, 58);
             this.pictureBox6.Name = "pictureBox6";
@@ -258,6 +271,7 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox7.Location = new System.Drawing.Point(329, 195);
             this.pictureBox7.Name = "pictureBox7";
@@ -269,6 +283,7 @@
             // 
             // pictureBox8
             // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox8.Location = new System.Drawing.Point(329, 58);
             this.pictureBox8.Name = "pictureBox8";
@@ -280,6 +295,7 @@
             // 
             // pictureBox9
             // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox9.Location = new System.Drawing.Point(329, 129);
             this.pictureBox9.Name = "pictureBox9";
@@ -291,6 +307,7 @@
             // 
             // pictureBox10
             // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox10.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox10.Location = new System.Drawing.Point(273, 58);
             this.pictureBox10.Name = "pictureBox10";
@@ -302,6 +319,7 @@
             // 
             // pictureBox11
             // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox11.Location = new System.Drawing.Point(273, 129);
             this.pictureBox11.Name = "pictureBox11";
@@ -313,6 +331,7 @@
             // 
             // pictureBox12
             // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox12.Location = new System.Drawing.Point(273, 195);
             this.pictureBox12.Name = "pictureBox12";
@@ -324,6 +343,7 @@
             // 
             // pictureBox13
             // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox13.Location = new System.Drawing.Point(140, 58);
             this.pictureBox13.Name = "pictureBox13";
@@ -335,6 +355,7 @@
             // 
             // pictureBox14
             // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox14.Location = new System.Drawing.Point(140, 129);
             this.pictureBox14.Name = "pictureBox14";
@@ -346,6 +367,7 @@
             // 
             // pictureBox15
             // 
+            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox15.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox15.Location = new System.Drawing.Point(140, 195);
             this.pictureBox15.Name = "pictureBox15";
@@ -357,6 +379,7 @@
             // 
             // pictureBox16
             // 
+            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox16.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox16.Location = new System.Drawing.Point(356, 460);
             this.pictureBox16.Name = "pictureBox16";
@@ -368,6 +391,7 @@
             // 
             // pictureBox17
             // 
+            this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox17.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox17.Location = new System.Drawing.Point(356, 396);
             this.pictureBox17.Name = "pictureBox17";
@@ -379,6 +403,7 @@
             // 
             // pictureBox18
             // 
+            this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox18.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox18.Location = new System.Drawing.Point(356, 323);
             this.pictureBox18.Name = "pictureBox18";
@@ -390,6 +415,7 @@
             // 
             // pictureBox19
             // 
+            this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox19.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox19.Location = new System.Drawing.Point(244, 323);
             this.pictureBox19.Name = "pictureBox19";
@@ -401,6 +427,7 @@
             // 
             // pictureBox20
             // 
+            this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox20.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox20.Location = new System.Drawing.Point(300, 396);
             this.pictureBox20.Name = "pictureBox20";
@@ -412,6 +439,7 @@
             // 
             // pictureBox21
             // 
+            this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox21.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox21.Location = new System.Drawing.Point(300, 323);
             this.pictureBox21.Name = "pictureBox21";
@@ -423,6 +451,7 @@
             // 
             // pictureBox22
             // 
+            this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox22.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox22.Location = new System.Drawing.Point(300, 460);
             this.pictureBox22.Name = "pictureBox22";
@@ -434,6 +463,7 @@
             // 
             // pictureBox23
             // 
+            this.pictureBox23.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox23.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox23.Location = new System.Drawing.Point(244, 460);
             this.pictureBox23.Name = "pictureBox23";
@@ -445,6 +475,7 @@
             // 
             // pictureBox24
             // 
+            this.pictureBox24.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox24.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox24.Location = new System.Drawing.Point(244, 396);
             this.pictureBox24.Name = "pictureBox24";
@@ -456,6 +487,7 @@
             // 
             // pictureBox25
             // 
+            this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox25.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox25.Location = new System.Drawing.Point(191, 460);
             this.pictureBox25.Name = "pictureBox25";
@@ -467,6 +499,7 @@
             // 
             // pictureBox26
             // 
+            this.pictureBox26.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox26.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox26.Location = new System.Drawing.Point(191, 396);
             this.pictureBox26.Name = "pictureBox26";
@@ -478,6 +511,7 @@
             // 
             // pictureBox27
             // 
+            this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox27.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox27.Location = new System.Drawing.Point(191, 323);
             this.pictureBox27.Name = "pictureBox27";
@@ -489,6 +523,7 @@
             // 
             // pictureBox28
             // 
+            this.pictureBox28.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox28.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox28.Location = new System.Drawing.Point(38, 460);
             this.pictureBox28.Name = "pictureBox28";
@@ -500,6 +535,7 @@
             // 
             // pictureBox29
             // 
+            this.pictureBox29.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox29.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox29.Location = new System.Drawing.Point(38, 396);
             this.pictureBox29.Name = "pictureBox29";
@@ -511,6 +547,7 @@
             // 
             // pictureBox30
             // 
+            this.pictureBox30.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox30.Image = global::PacMan.Properties.Resources.cccc;
             this.pictureBox30.Location = new System.Drawing.Point(38, 323);
             this.pictureBox30.Name = "pictureBox30";
@@ -520,29 +557,35 @@
             this.pictureBox30.TabStop = false;
             this.pictureBox30.Tag = "coin";
             // 
-            // label1
+            // lblScore
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "label1";
+            this.lblScore.AutoSize = true;
+            this.lblScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblScore.Font = new System.Drawing.Font("Hobo Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.ForeColor = System.Drawing.Color.Yellow;
+            this.lblScore.Location = new System.Drawing.Point(17, 45);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(65, 23);
+            this.lblScore.TabIndex = 37;
+            this.lblScore.Text = "SCORE";
             // 
-            // label2
+            // lblGameOver
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 31);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "label2";
+            this.lblGameOver.AutoSize = true;
+            this.lblGameOver.BackColor = System.Drawing.Color.Transparent;
+            this.lblGameOver.Font = new System.Drawing.Font("Hobo Std", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameOver.ForeColor = System.Drawing.Color.Yellow;
+            this.lblGameOver.Location = new System.Drawing.Point(234, 9);
+            this.lblGameOver.Name = "lblGameOver";
+            this.lblGameOver.Size = new System.Drawing.Size(180, 38);
+            this.lblGameOver.TabIndex = 38;
+            this.lblGameOver.Text = "GAME OVER";
             // 
             // tmrTimer
             // 
+            this.tmrTimer.Enabled = true;
             this.tmrTimer.Interval = 20;
+            this.tmrTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // PacManForm
             // 
@@ -550,8 +593,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(609, 531);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblGameOver);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox29);
             this.Controls.Add(this.pictureBox28);
@@ -679,8 +722,8 @@
         private System.Windows.Forms.PictureBox pictureBox28;
         private System.Windows.Forms.PictureBox pictureBox29;
         private System.Windows.Forms.PictureBox pictureBox30;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label lblGameOver;
         private System.Windows.Forms.Timer tmrTimer;
     }
 }
