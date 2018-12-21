@@ -40,35 +40,46 @@ namespace PacMan
             
             //load sounds and make certain objects invisible
             lblGameOver.Visible = false;
+            //load the sound to the sound player
             Sound = new SoundPlayer("1-03 Hymn to Red October.wav");
+            //Confirm that the sound is loaded
             Console.WriteLine("***Sound Loaded");
+            //hide the unmute button because the sound is automatically unmuted
             picUnmute.Hide();
         }
 
+        //procedure for when a key is down
         private void keyisdown(object sender, KeyEventArgs e)
         {
+            //tell the user in the debug console when a key is pressed
             Console.WriteLine("***keyisdown called");
 
             //if the left arrow key is pressed:
             if (e.KeyCode == Keys.Left)
             {
+                //tell the user in the debug console that the up arrow has been pressed
                 Console.WriteLine("***Keys.Left is pressed");
                 //set goLeft = true
                 goLeft = true;
-                //change the image to the pacman moving left
+                //change the image to the pacman facing left
                 picPacman.Image = Properties.Resources.Left;
             }
 
             //if the right arrow key is pressed:
             if (e.KeyCode == Keys.Right)
             {
+                //tell the user in the debug console that the up arrow has been pressed
                 Console.WriteLine("***Keys.Right is pressed");
+                //set goRight = true
                 goRight = true;
+                //change the image so the pacman is facing right
                 picPacman.Image = Properties.Resources.Right;
             }
 
+            //if the up arrow key is pressed:
             if (e.KeyCode == Keys.Up)
             {
+                //tell the user in the debug console that the up arrow has been pressed
                 Console.WriteLine("***Keys.Up is pressed");
                 goUp = true;
                 picPacman.Image = Properties.Resources.Up;
