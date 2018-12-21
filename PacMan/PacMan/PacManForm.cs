@@ -16,6 +16,8 @@ namespace PacMan
 {
     public partial class PacManForm : Form
     {
+        List<PictureBox> listOfPictureBoxes = new List<PictureBox>();
+
         //create the sound player
         private SoundPlayer Sound;
 
@@ -220,6 +222,34 @@ namespace PacMan
                         Console.WriteLine("***Score is " + score);
                     }
                 }
+                if (atag is PictureBox && atag.Tag == "noMansLandTop")
+                {
+                    if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
+                    {
+                        picPacman.Top += speed;
+                    }
+                }
+                if (atag is PictureBox && atag.Tag == "noMansLandRight")
+                {
+                    if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
+                    {
+                        picPacman.Left -= speed;
+                    }
+                }
+                if (atag is PictureBox && atag.Tag == "noMansLandBottom")
+                {
+                    if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
+                    {
+                        picPacman.Top -= speed;
+                    }
+                }
+                if (atag is PictureBox && atag.Tag == "noMansLandLeft")
+                {
+                    if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
+                    {
+                        picPacman.Left += speed;
+                    }
+                }
             }//end the for loop for checking walls, points and ghosts
 
             //ghost 3 going crazy here
@@ -256,6 +286,9 @@ namespace PacMan
             Console.WriteLine("Waiting for 1 second");
             Thread.Sleep(1000);
             Console.WriteLine("Loading main game");
+            Console.WriteLine("Populating listOfPictureBoxes with each picturebox");
+            //populating the list with all the cards
+            PopulateList();
             t.Abort();
             Sound.Play();
         }
@@ -263,6 +296,40 @@ namespace PacMan
         public void SplashStart()
         {
             Application.Run(new frmSplashScreen());
+        }
+
+        public void PopulateList()
+        {
+            listOfPictureBoxes.Add(picCoin1);
+            listOfPictureBoxes.Add(picCoin2);
+            listOfPictureBoxes.Add(picCoin3);
+            listOfPictureBoxes.Add(picCoin4);
+            listOfPictureBoxes.Add(picCoin5);
+            listOfPictureBoxes.Add(picCoin6);
+            listOfPictureBoxes.Add(picCoin7);
+            listOfPictureBoxes.Add(picCoin8);
+            listOfPictureBoxes.Add(picCoin9);
+            listOfPictureBoxes.Add(picCoin10);
+            listOfPictureBoxes.Add(picCoin11);
+            listOfPictureBoxes.Add(picCoin12);
+            listOfPictureBoxes.Add(picCoin12);
+            listOfPictureBoxes.Add(picCoin14);
+            listOfPictureBoxes.Add(picCoin15);
+            listOfPictureBoxes.Add(picCoin16);
+            listOfPictureBoxes.Add(picCoin17);
+            listOfPictureBoxes.Add(picCoin18);
+            listOfPictureBoxes.Add(picCoin19);
+            listOfPictureBoxes.Add(picCoin20);
+            listOfPictureBoxes.Add(picCoin21);
+            listOfPictureBoxes.Add(picCoin22);
+            listOfPictureBoxes.Add(picCoin23);
+            listOfPictureBoxes.Add(picCoin24);
+            listOfPictureBoxes.Add(picCoin25);
+            listOfPictureBoxes.Add(picCoin26);
+            listOfPictureBoxes.Add(picCoin27);
+            listOfPictureBoxes.Add(picCoin28);
+            listOfPictureBoxes.Add(picCoin29);
+            listOfPictureBoxes.Add(picCoin30);
         }
     }
 }
