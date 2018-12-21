@@ -665,6 +665,7 @@
             this.Controls.Add(this.picWall4);
             this.Controls.Add(this.picWall3);
             this.Controls.Add(this.picWall1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PacManForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PACMAN";

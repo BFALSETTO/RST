@@ -17,7 +17,7 @@ namespace PacMan
     public partial class PacManForm : Form
     {
         //create the sound player
-        private SoundPlayer Sound = new SoundPlayer();
+        private SoundPlayer Sound;
 
         //delcare and initialize variables
         bool goUp = false, goDown = false, goLeft = false, goRight = false;
@@ -203,6 +203,9 @@ namespace PacMan
                         lblGameOver.Show();
                         tmrTimer.Stop();
                         picPacman.Hide();
+                        picMute.Hide();
+                        picUnmute.Hide();
+                        Sound.Stop();
                     }
                 }
                 if (atag is PictureBox && atag.Tag == "coin")
@@ -244,8 +247,6 @@ namespace PacMan
         {
             Thread t = new Thread(new ThreadStart(SplashStart));
             t.Start();
-            Console.WriteLine("Waiting for 5 seconds");
-            Thread.Sleep(1000);
             Console.WriteLine("Waiting for 4 seconds");
             Thread.Sleep(1000);
             Console.WriteLine("Waiting for 3 seconds");
