@@ -119,11 +119,11 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Font = new System.Drawing.Font("Hobo Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.Color.Yellow;
             this.lblScore.Location = new System.Drawing.Point(17, 45);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(71, 20);
+            this.lblScore.Size = new System.Drawing.Size(65, 23);
             this.lblScore.TabIndex = 37;
             this.lblScore.Text = "SCORE";
             // 
@@ -131,11 +131,11 @@
             // 
             this.lblGameOver.AutoSize = true;
             this.lblGameOver.BackColor = System.Drawing.Color.Transparent;
-            this.lblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameOver.Font = new System.Drawing.Font("Hobo Std", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGameOver.ForeColor = System.Drawing.Color.Yellow;
             this.lblGameOver.Location = new System.Drawing.Point(234, 9);
             this.lblGameOver.Name = "lblGameOver";
-            this.lblGameOver.Size = new System.Drawing.Size(186, 31);
+            this.lblGameOver.Size = new System.Drawing.Size(180, 38);
             this.lblGameOver.TabIndex = 38;
             this.lblGameOver.Text = "GAME OVER";
             // 
@@ -150,9 +150,9 @@
             this.picMute.BackColor = System.Drawing.Color.Transparent;
             this.picMute.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picMute.BackgroundImage")));
             this.picMute.Image = global::PacMan.Properties.Resources.Unmute1;
-            this.picMute.Location = new System.Drawing.Point(557, 12);
+            this.picMute.Location = new System.Drawing.Point(572, 12);
             this.picMute.Name = "picMute";
-            this.picMute.Size = new System.Drawing.Size(40, 40);
+            this.picMute.Size = new System.Drawing.Size(25, 25);
             this.picMute.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMute.TabIndex = 40;
             this.picMute.TabStop = false;
@@ -162,9 +162,9 @@
             // 
             this.picUnmute.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picUnmute.BackgroundImage")));
             this.picUnmute.Image = ((System.Drawing.Image)(resources.GetObject("picUnmute.Image")));
-            this.picUnmute.Location = new System.Drawing.Point(557, 12);
+            this.picUnmute.Location = new System.Drawing.Point(572, 12);
             this.picUnmute.Name = "picUnmute";
-            this.picUnmute.Size = new System.Drawing.Size(40, 40);
+            this.picUnmute.Size = new System.Drawing.Size(25, 25);
             this.picUnmute.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picUnmute.TabIndex = 39;
             this.picUnmute.TabStop = false;
