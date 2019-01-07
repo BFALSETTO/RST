@@ -199,6 +199,9 @@ namespace PacMan
                     //checking if the player hits the wall or the ghost, them game over
                     if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds) || score == 30)
                     {
+                        int indexToRemove;
+                        Random rndNumGen = new Random();
+
                         picPacman.Left = 0;
                         picPacman.Top = 25;
                         lblGameOver.Text = "GAME OVER";
@@ -208,6 +211,12 @@ namespace PacMan
                         picMute.Hide();
                         picUnmute.Hide();
                         Sound.Stop();
+
+                        for (int counter = 0; counter < listOfPictureBoxes.Count(); counter++)
+                        {
+                            indexToRemove = rndNumGen.Next(0, listOfPictureBoxes.Count());
+                            listOfPictureBoxes.RemoveAt(indexToRemove);
+                        }
                     }
                 }
                 if (atag is PictureBox && atag.Tag == "coin")
@@ -221,6 +230,9 @@ namespace PacMan
                         score++;
                         Console.WriteLine("***Score is " + score);
                         Console.WriteLine(atag.Name);
+                        listOfPictureBoxes.Remove((PictureBox)atag);
+                        Console.WriteLine("***listOfPictureBoxes.Count is " + listOfPictureBoxes.Count());                        
+
                     }
                 }
                 if (atag is PictureBox && atag.Tag == "noMansLandTop")
