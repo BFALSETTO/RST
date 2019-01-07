@@ -10,3 +10,15 @@ N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Falsetto, Benjamin (s255212
 N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Falsetto, Benjamin (s255212)\RST\PacMan\PacMan\obj\Debug\PacMan.pdb
 N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Falsetto, Benjamin (s255212)\RST\PacMan\PacMan\obj\Debug\PacMan.frmSplashScreen.resources
 N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Falsetto, Benjamin (s255212)\RST\PacMan\PacMan\obj\Debug\PacMan.frmMenu.resources
+C:\Users\benja\Downloads\ICS3U\RST\PacMan\PacMan\bin\Debug\PacMan.exe.config
+C:\Users\benja\Downloads\ICS3U\RST\PacMan\PacMan\bin\Debug\PacMan.exe
+C:\Users\benja\Downloads\ICS3U\RST\PacMan\PacMan\bin\Debug\PacMan.pdb
+C:\Users\benja\Downloads\ICS3U\RST\PacMan\PacMan\obj\Debug\PacMan.csprojAssemblyReference.cache
+C:\Users\benja\Downloads\ICS3U\RST\PacMan\PacMan\obj\Debug\PacMan.frmMenu.resources
+C:\Users\benja\Downloads\ICS3U\RST\PacMan\PacMan\obj\Debug\PacMan.PacManForm.resources
+C:\Users\benja\Downloads\ICS3U\RST\PacMan\PacMan\obj\Debug\PacMan.Properties.Resources.resources
+C:\Users\benja\Downloads\ICS3U\RST\PacMan\PacMan\obj\Debug\PacMan.frmSplashScreen.resources
+C:\Users\benja\Downloads\ICS3U\RST\PacMan\PacMan\obj\Debug\PacMan.csproj.GenerateResource.cache
+C:\Users\benja\Downloads\ICS3U\RST\PacMan\PacMan\obj\Debug\PacMan.csproj.CoreCompileInputs.cache
+C:\Users\benja\Downloads\ICS3U\RST\PacMan\PacMan\obj\Debug\PacMan.exe
+C:\Users\benja\Downloads\ICS3U\RST\PacMan\PacMan\obj\Debug\PacMan.pdb

@@ -127,11 +127,11 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblScore.Font = new System.Drawing.Font("Hobo Std", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.Color.Yellow;
             this.lblScore.Location = new System.Drawing.Point(17, 45);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(65, 23);
+            this.lblScore.Size = new System.Drawing.Size(71, 20);
             this.lblScore.TabIndex = 37;
             this.lblScore.Text = "SCORE";
             // 
@@ -139,11 +139,11 @@
             // 
             this.lblGameOver.AutoSize = true;
             this.lblGameOver.BackColor = System.Drawing.Color.Transparent;
-            this.lblGameOver.Font = new System.Drawing.Font("Hobo Std", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameOver.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGameOver.ForeColor = System.Drawing.Color.Yellow;
             this.lblGameOver.Location = new System.Drawing.Point(234, 9);
             this.lblGameOver.Name = "lblGameOver";
-            this.lblGameOver.Size = new System.Drawing.Size(180, 38);
+            this.lblGameOver.Size = new System.Drawing.Size(186, 31);
             this.lblGameOver.TabIndex = 38;
             this.lblGameOver.Text = "GAME OVER";
             // 

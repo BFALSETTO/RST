@@ -220,6 +220,7 @@ namespace PacMan
                         //add to the score
                         score++;
                         Console.WriteLine("***Score is " + score);
+                        Console.WriteLine(atag.Name);
                     }
                 }
                 if (atag is PictureBox && atag.Tag == "noMansLandTop")
@@ -285,12 +286,11 @@ namespace PacMan
             Thread.Sleep(1000);
             Console.WriteLine("Waiting for 1 second");
             Thread.Sleep(1000);
-            Console.WriteLine("Loading main game");
+            Console.WriteLine("Loading main menu");
             Console.WriteLine("Populating listOfPictureBoxes with each picturebox");
-            //populating the list with all the cards
-            PopulateList();
+            //populating the list with all the coins
             t.Abort();
-            Sound.Play();
+            PopulateList();
         }
 
         public void SplashStart()
