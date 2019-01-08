@@ -173,5 +173,20 @@
   <ItemGroup>
     <None Include="Resources\Unmute1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zach.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zachdown.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zachleft.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zachright.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zachup.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

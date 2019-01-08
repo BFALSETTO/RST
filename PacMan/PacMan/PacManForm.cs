@@ -58,7 +58,7 @@ namespace PacMan
                 //set goLeft = true
                 goLeft = true;
                 //change the image to the pacman moving left
-                picPacman.Image = Properties.Resources.Left;
+                picPacman.Image = Properties.Resources.zachleft;
             }
 
             //if the right arrow key is pressed:
@@ -66,21 +66,21 @@ namespace PacMan
             {
                 Console.WriteLine("***Keys.Right is pressed");
                 goRight = true;
-                picPacman.Image = Properties.Resources.Right;
+                picPacman.Image = Properties.Resources.zachright;
             }
 
             if (e.KeyCode == Keys.Up)
             {
                 Console.WriteLine("***Keys.Up is pressed");
                 goUp = true;
-                picPacman.Image = Properties.Resources.Up;
+                picPacman.Image = Properties.Resources.zachup;
             }
 
             if (e.KeyCode == Keys.Down)
             {
                 Console.WriteLine("***Keys.Down is pressed");
                 goDown = true;
-                picPacman.Image = Properties.Resources.down;
+                picPacman.Image = Properties.Resources.zachdown;
             }
         }
 
@@ -194,7 +194,7 @@ namespace PacMan
             //for loop to check walls ghosts and points
             foreach (Control atag in this.Controls)
             {
-                if (atag is PictureBox && atag.Tag == "wall" || atag.Tag == "ghost")
+                if (atag is PictureBox && atag.Tag == "ghost")
                 {
                     //checking if the player hits the wall or the ghost, them game over
                     if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds) || score == 30)
@@ -214,7 +214,10 @@ namespace PacMan
 
                         for (int counter = 0; counter < listOfPictureBoxes.Count(); counter++)
                         {
+                            string tmpPicString;
+                            PictureBox tmpPicBox;
                             indexToRemove = rndNumGen.Next(0, listOfPictureBoxes.Count());
+                            //tmpPicString = listOfPictureBoxes.ElementAt;
                             listOfPictureBoxes.RemoveAt(indexToRemove);
                         }
                     }
@@ -261,6 +264,34 @@ namespace PacMan
                     if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
                     {
                         picPacman.Left += speed;
+                    }
+                }
+                if (atag is PictureBox && atag.Tag == "wallLeft")
+                {
+                    if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
+                    {
+                        picPacman.Left -= speed;
+                    }
+                }
+                if (atag is PictureBox && atag.Tag == "wallTop")
+                {
+                    if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
+                    {
+                        picPacman.Top -= speed;
+                    }
+                }
+                if (atag is PictureBox && atag.Tag == "wallRight")
+                {
+                    if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
+                    {
+                        picPacman.Left += speed;
+                    }
+                }
+                if (atag is PictureBox && atag.Tag == "wallBottom")
+                {
+                    if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
+                    {
+                        picPacman.Top += speed;
                     }
                 }
             }//end the for loop for checking walls, points and ghosts
