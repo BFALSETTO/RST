@@ -34,6 +34,7 @@ namespace PacMan
         int ghost3x = 8;
         int ghost3y = 8;
 
+        //score variable
         int score = 0;
 
         public PacManForm()
@@ -65,6 +66,7 @@ namespace PacMan
             if (e.KeyCode == Keys.Right)
             {
                 Console.WriteLine("***Keys.Right is pressed");
+
                 goRight = true;
                 picPacman.Image = Properties.Resources.zachright;
             }
