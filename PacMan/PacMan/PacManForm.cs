@@ -19,7 +19,7 @@ namespace PacMan
         List<PictureBox> listOfPictureBoxes = new List<PictureBox>();
 
         //create the sound player
-        private SoundPlayer Sound;
+        private SoundPlayer BackgroundMusic;
 
         //delcare and initialize variables
         bool goUp = false, goDown = false, goLeft = false, goRight = false;
@@ -42,7 +42,7 @@ namespace PacMan
             
             //load sounds and make certain objects invisible
             lblGameOver.Visible = false;
-            Sound = new SoundPlayer("1-03 Hymn to Red October.wav");
+            BackgroundMusic = new SoundPlayer("Background Theme.wav");
             Console.WriteLine("***Sound Loaded");
             picUnmute.Hide();
         }
@@ -109,14 +109,14 @@ namespace PacMan
 
         private void picMute_Click(object sender, EventArgs e)
         {
-            Sound.Stop();
+            BackgroundMusic.Stop();
             picMute.Hide();
             picUnmute.Show();
         }
 
         private void picUnmute_Click(object sender, EventArgs e)
         {
-            Sound.Play();
+            BackgroundMusic.Play();
             picUnmute.Hide();
             picMute.Show();
         }
@@ -210,7 +210,7 @@ namespace PacMan
                         picPacman.Hide();
                         picMute.Hide();
                         picUnmute.Hide();
-                        Sound.Stop();
+                        BackgroundMusic.Stop();
 
                         for (int counter = 0; counter < listOfPictureBoxes.Count(); counter++)
                         {
@@ -334,6 +334,7 @@ namespace PacMan
             //populating the list with all the coins
             t.Abort();
             PopulateList();
+            BackgroundMusic.Play();
         }
 
         public void SplashStart()
