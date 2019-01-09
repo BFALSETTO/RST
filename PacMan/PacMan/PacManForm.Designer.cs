@@ -33,6 +33,22 @@
             this.lblScore = new System.Windows.Forms.Label();
             this.lblGameOver = new System.Windows.Forms.Label();
             this.tmrTimer = new System.Windows.Forms.Timer(this.components);
+            this.picWall4Top = new System.Windows.Forms.PictureBox();
+            this.picWall3Top = new System.Windows.Forms.PictureBox();
+            this.picWall2Top = new System.Windows.Forms.PictureBox();
+            this.picWall1Top = new System.Windows.Forms.PictureBox();
+            this.picWall4Bottom = new System.Windows.Forms.PictureBox();
+            this.picWall3Bottom = new System.Windows.Forms.PictureBox();
+            this.picWall2Bottom = new System.Windows.Forms.PictureBox();
+            this.picWall1Bottom = new System.Windows.Forms.PictureBox();
+            this.picWall2Right = new System.Windows.Forms.PictureBox();
+            this.picWall4Right = new System.Windows.Forms.PictureBox();
+            this.picWall3Right = new System.Windows.Forms.PictureBox();
+            this.picWall1Right = new System.Windows.Forms.PictureBox();
+            this.picWall2Left = new System.Windows.Forms.PictureBox();
+            this.picWall4Left = new System.Windows.Forms.PictureBox();
+            this.picWall3Left = new System.Windows.Forms.PictureBox();
+            this.picWall1Left = new System.Windows.Forms.PictureBox();
             this.picWallTop = new System.Windows.Forms.PictureBox();
             this.picWallLeft = new System.Windows.Forms.PictureBox();
             this.picWallBottom = new System.Windows.Forms.PictureBox();
@@ -72,27 +88,27 @@
             this.picPacman = new System.Windows.Forms.PictureBox();
             this.picPinkGhost = new System.Windows.Forms.PictureBox();
             this.picYellowGhost = new System.Windows.Forms.PictureBox();
-            this.picRedGhost = new System.Windows.Forms.PictureBox();
+            this.picUgandanKnuckles = new System.Windows.Forms.PictureBox();
             this.picWall2 = new System.Windows.Forms.PictureBox();
             this.picWall4 = new System.Windows.Forms.PictureBox();
             this.picWall3 = new System.Windows.Forms.PictureBox();
             this.picWall1 = new System.Windows.Forms.PictureBox();
-            this.picWall1Left = new System.Windows.Forms.PictureBox();
-            this.picWall3Left = new System.Windows.Forms.PictureBox();
-            this.picWall4Left = new System.Windows.Forms.PictureBox();
-            this.picWall2Left = new System.Windows.Forms.PictureBox();
-            this.picWall1Right = new System.Windows.Forms.PictureBox();
-            this.picWall3Right = new System.Windows.Forms.PictureBox();
-            this.picWall4Right = new System.Windows.Forms.PictureBox();
-            this.picWall2Right = new System.Windows.Forms.PictureBox();
-            this.picWall1Bottom = new System.Windows.Forms.PictureBox();
-            this.picWall2Bottom = new System.Windows.Forms.PictureBox();
-            this.picWall3Bottom = new System.Windows.Forms.PictureBox();
-            this.picWall4Bottom = new System.Windows.Forms.PictureBox();
-            this.picWall1Top = new System.Windows.Forms.PictureBox();
-            this.picWall2Top = new System.Windows.Forms.PictureBox();
-            this.picWall3Top = new System.Windows.Forms.PictureBox();
-            this.picWall4Top = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall4Top)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall3Top)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall2Top)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall1Top)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall4Bottom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall3Bottom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall2Bottom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall1Bottom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall2Right)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall4Right)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall3Right)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall1Right)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall2Left)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall4Left)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall3Left)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall1Left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWallTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWallLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWallBottom)).BeginInit();
@@ -132,27 +148,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.picPacman)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPinkGhost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picYellowGhost)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRedGhost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUgandanKnuckles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall1Left)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall3Left)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall4Left)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall2Left)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall1Right)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall3Right)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall4Right)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall2Right)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall1Bottom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall2Bottom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall3Bottom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall4Bottom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall1Top)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall2Top)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall3Top)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall4Top)).BeginInit();
             this.SuspendLayout();
             // 
             // lblScore
@@ -184,6 +184,166 @@
             this.tmrTimer.Enabled = true;
             this.tmrTimer.Interval = 20;
             this.tmrTimer.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // picWall4Top
+            // 
+            this.picWall4Top.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall4Top.Location = new System.Drawing.Point(387, 323);
+            this.picWall4Top.Name = "picWall4Top";
+            this.picWall4Top.Size = new System.Drawing.Size(33, 10);
+            this.picWall4Top.TabIndex = 60;
+            this.picWall4Top.TabStop = false;
+            this.picWall4Top.Tag = "wallTop";
+            // 
+            // picWall3Top
+            // 
+            this.picWall3Top.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall3Top.Location = new System.Drawing.Point(69, 323);
+            this.picWall3Top.Name = "picWall3Top";
+            this.picWall3Top.Size = new System.Drawing.Size(33, 10);
+            this.picWall3Top.TabIndex = 59;
+            this.picWall3Top.TabStop = false;
+            this.picWall3Top.Tag = "wallTop";
+            // 
+            // picWall2Top
+            // 
+            this.picWall2Top.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall2Top.Location = new System.Drawing.Point(477, 58);
+            this.picWall2Top.Name = "picWall2Top";
+            this.picWall2Top.Size = new System.Drawing.Size(33, 10);
+            this.picWall2Top.TabIndex = 58;
+            this.picWall2Top.TabStop = false;
+            this.picWall2Top.Tag = "wallTop";
+            // 
+            // picWall1Top
+            // 
+            this.picWall1Top.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall1Top.Location = new System.Drawing.Point(171, 58);
+            this.picWall1Top.Name = "picWall1Top";
+            this.picWall1Top.Size = new System.Drawing.Size(33, 10);
+            this.picWall1Top.TabIndex = 57;
+            this.picWall1Top.TabStop = false;
+            this.picWall1Top.Tag = "wallTop";
+            // 
+            // picWall4Bottom
+            // 
+            this.picWall4Bottom.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall4Bottom.Location = new System.Drawing.Point(387, 475);
+            this.picWall4Bottom.Name = "picWall4Bottom";
+            this.picWall4Bottom.Size = new System.Drawing.Size(33, 10);
+            this.picWall4Bottom.TabIndex = 56;
+            this.picWall4Bottom.TabStop = false;
+            this.picWall4Bottom.Tag = "wallBottom";
+            // 
+            // picWall3Bottom
+            // 
+            this.picWall3Bottom.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall3Bottom.Location = new System.Drawing.Point(69, 475);
+            this.picWall3Bottom.Name = "picWall3Bottom";
+            this.picWall3Bottom.Size = new System.Drawing.Size(33, 10);
+            this.picWall3Bottom.TabIndex = 55;
+            this.picWall3Bottom.TabStop = false;
+            this.picWall3Bottom.Tag = "wallBottom";
+            // 
+            // picWall2Bottom
+            // 
+            this.picWall2Bottom.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall2Bottom.Location = new System.Drawing.Point(477, 210);
+            this.picWall2Bottom.Name = "picWall2Bottom";
+            this.picWall2Bottom.Size = new System.Drawing.Size(33, 10);
+            this.picWall2Bottom.TabIndex = 54;
+            this.picWall2Bottom.TabStop = false;
+            this.picWall2Bottom.Tag = "wallBottom";
+            // 
+            // picWall1Bottom
+            // 
+            this.picWall1Bottom.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall1Bottom.Location = new System.Drawing.Point(171, 210);
+            this.picWall1Bottom.Name = "picWall1Bottom";
+            this.picWall1Bottom.Size = new System.Drawing.Size(33, 10);
+            this.picWall1Bottom.TabIndex = 53;
+            this.picWall1Bottom.TabStop = false;
+            this.picWall1Bottom.Tag = "wallBottom";
+            // 
+            // picWall2Right
+            // 
+            this.picWall2Right.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall2Right.Location = new System.Drawing.Point(500, 58);
+            this.picWall2Right.Name = "picWall2Right";
+            this.picWall2Right.Size = new System.Drawing.Size(10, 162);
+            this.picWall2Right.TabIndex = 52;
+            this.picWall2Right.TabStop = false;
+            this.picWall2Right.Tag = "wallRight";
+            // 
+            // picWall4Right
+            // 
+            this.picWall4Right.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall4Right.Location = new System.Drawing.Point(410, 323);
+            this.picWall4Right.Name = "picWall4Right";
+            this.picWall4Right.Size = new System.Drawing.Size(10, 162);
+            this.picWall4Right.TabIndex = 51;
+            this.picWall4Right.TabStop = false;
+            this.picWall4Right.Tag = "wallRight";
+            // 
+            // picWall3Right
+            // 
+            this.picWall3Right.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall3Right.Location = new System.Drawing.Point(92, 323);
+            this.picWall3Right.Name = "picWall3Right";
+            this.picWall3Right.Size = new System.Drawing.Size(10, 162);
+            this.picWall3Right.TabIndex = 50;
+            this.picWall3Right.TabStop = false;
+            this.picWall3Right.Tag = "wallRight";
+            // 
+            // picWall1Right
+            // 
+            this.picWall1Right.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall1Right.Location = new System.Drawing.Point(194, 58);
+            this.picWall1Right.Name = "picWall1Right";
+            this.picWall1Right.Size = new System.Drawing.Size(10, 162);
+            this.picWall1Right.TabIndex = 49;
+            this.picWall1Right.TabStop = false;
+            this.picWall1Right.Tag = "wallRight";
+            // 
+            // picWall2Left
+            // 
+            this.picWall2Left.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall2Left.Location = new System.Drawing.Point(477, 58);
+            this.picWall2Left.Name = "picWall2Left";
+            this.picWall2Left.Size = new System.Drawing.Size(10, 162);
+            this.picWall2Left.TabIndex = 48;
+            this.picWall2Left.TabStop = false;
+            this.picWall2Left.Tag = "wallLeft";
+            // 
+            // picWall4Left
+            // 
+            this.picWall4Left.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall4Left.Location = new System.Drawing.Point(387, 323);
+            this.picWall4Left.Name = "picWall4Left";
+            this.picWall4Left.Size = new System.Drawing.Size(10, 162);
+            this.picWall4Left.TabIndex = 47;
+            this.picWall4Left.TabStop = false;
+            this.picWall4Left.Tag = "wallLeft";
+            // 
+            // picWall3Left
+            // 
+            this.picWall3Left.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall3Left.Location = new System.Drawing.Point(69, 323);
+            this.picWall3Left.Name = "picWall3Left";
+            this.picWall3Left.Size = new System.Drawing.Size(10, 162);
+            this.picWall3Left.TabIndex = 46;
+            this.picWall3Left.TabStop = false;
+            this.picWall3Left.Tag = "wallLeft";
+            // 
+            // picWall1Left
+            // 
+            this.picWall1Left.BackColor = System.Drawing.Color.MidnightBlue;
+            this.picWall1Left.Location = new System.Drawing.Point(171, 58);
+            this.picWall1Left.Name = "picWall1Left";
+            this.picWall1Left.Size = new System.Drawing.Size(10, 162);
+            this.picWall1Left.TabIndex = 45;
+            this.picWall1Left.TabStop = false;
+            this.picWall1Left.Tag = "wallLeft";
             // 
             // picWallTop
             // 
@@ -620,7 +780,7 @@
             // picPinkGhost
             // 
             this.picPinkGhost.BackColor = System.Drawing.Color.Transparent;
-            this.picPinkGhost.Image = global::PacMan.Properties.Resources.pink_guy;
+            this.picPinkGhost.Image = global::PacMan.Properties.Resources.ghost21;
             this.picPinkGhost.Location = new System.Drawing.Point(426, 383);
             this.picPinkGhost.Name = "picPinkGhost";
             this.picPinkGhost.Size = new System.Drawing.Size(36, 38);
@@ -641,17 +801,17 @@
             this.picYellowGhost.TabStop = false;
             this.picYellowGhost.Tag = "ghost";
             // 
-            // picRedGhost
+            // picUgandanKnuckles
             // 
-            this.picRedGhost.BackColor = System.Drawing.Color.Transparent;
-            this.picRedGhost.Image = global::PacMan.Properties.Resources.red_guy;
-            this.picRedGhost.Location = new System.Drawing.Point(210, 116);
-            this.picRedGhost.Name = "picRedGhost";
-            this.picRedGhost.Size = new System.Drawing.Size(36, 38);
-            this.picRedGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picRedGhost.TabIndex = 4;
-            this.picRedGhost.TabStop = false;
-            this.picRedGhost.Tag = "ghost";
+            this.picUgandanKnuckles.BackColor = System.Drawing.Color.Transparent;
+            this.picUgandanKnuckles.Image = global::PacMan.Properties.Resources.ghost1;
+            this.picUgandanKnuckles.Location = new System.Drawing.Point(210, 116);
+            this.picUgandanKnuckles.Name = "picUgandanKnuckles";
+            this.picUgandanKnuckles.Size = new System.Drawing.Size(36, 38);
+            this.picUgandanKnuckles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUgandanKnuckles.TabIndex = 4;
+            this.picUgandanKnuckles.TabStop = false;
+            this.picUgandanKnuckles.Tag = "ghost";
             // 
             // picWall2
             // 
@@ -692,166 +852,6 @@
             this.picWall1.TabIndex = 0;
             this.picWall1.TabStop = false;
             this.picWall1.Tag = "wall";
-            // 
-            // picWall1Left
-            // 
-            this.picWall1Left.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall1Left.Location = new System.Drawing.Point(171, 58);
-            this.picWall1Left.Name = "picWall1Left";
-            this.picWall1Left.Size = new System.Drawing.Size(10, 162);
-            this.picWall1Left.TabIndex = 45;
-            this.picWall1Left.TabStop = false;
-            this.picWall1Left.Tag = "wallLeft";
-            // 
-            // picWall3Left
-            // 
-            this.picWall3Left.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall3Left.Location = new System.Drawing.Point(69, 323);
-            this.picWall3Left.Name = "picWall3Left";
-            this.picWall3Left.Size = new System.Drawing.Size(10, 162);
-            this.picWall3Left.TabIndex = 46;
-            this.picWall3Left.TabStop = false;
-            this.picWall3Left.Tag = "wallLeft";
-            // 
-            // picWall4Left
-            // 
-            this.picWall4Left.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall4Left.Location = new System.Drawing.Point(387, 323);
-            this.picWall4Left.Name = "picWall4Left";
-            this.picWall4Left.Size = new System.Drawing.Size(10, 162);
-            this.picWall4Left.TabIndex = 47;
-            this.picWall4Left.TabStop = false;
-            this.picWall4Left.Tag = "wallLeft";
-            // 
-            // picWall2Left
-            // 
-            this.picWall2Left.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall2Left.Location = new System.Drawing.Point(477, 58);
-            this.picWall2Left.Name = "picWall2Left";
-            this.picWall2Left.Size = new System.Drawing.Size(10, 162);
-            this.picWall2Left.TabIndex = 48;
-            this.picWall2Left.TabStop = false;
-            this.picWall2Left.Tag = "wallLeft";
-            // 
-            // picWall1Right
-            // 
-            this.picWall1Right.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall1Right.Location = new System.Drawing.Point(194, 58);
-            this.picWall1Right.Name = "picWall1Right";
-            this.picWall1Right.Size = new System.Drawing.Size(10, 162);
-            this.picWall1Right.TabIndex = 49;
-            this.picWall1Right.TabStop = false;
-            this.picWall1Right.Tag = "wallRight";
-            // 
-            // picWall3Right
-            // 
-            this.picWall3Right.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall3Right.Location = new System.Drawing.Point(92, 323);
-            this.picWall3Right.Name = "picWall3Right";
-            this.picWall3Right.Size = new System.Drawing.Size(10, 162);
-            this.picWall3Right.TabIndex = 50;
-            this.picWall3Right.TabStop = false;
-            this.picWall3Right.Tag = "wallRight";
-            // 
-            // picWall4Right
-            // 
-            this.picWall4Right.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall4Right.Location = new System.Drawing.Point(410, 323);
-            this.picWall4Right.Name = "picWall4Right";
-            this.picWall4Right.Size = new System.Drawing.Size(10, 162);
-            this.picWall4Right.TabIndex = 51;
-            this.picWall4Right.TabStop = false;
-            this.picWall4Right.Tag = "wallRight";
-            // 
-            // picWall2Right
-            // 
-            this.picWall2Right.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall2Right.Location = new System.Drawing.Point(500, 58);
-            this.picWall2Right.Name = "picWall2Right";
-            this.picWall2Right.Size = new System.Drawing.Size(10, 162);
-            this.picWall2Right.TabIndex = 52;
-            this.picWall2Right.TabStop = false;
-            this.picWall2Right.Tag = "wallRight";
-            // 
-            // picWall1Bottom
-            // 
-            this.picWall1Bottom.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall1Bottom.Location = new System.Drawing.Point(171, 210);
-            this.picWall1Bottom.Name = "picWall1Bottom";
-            this.picWall1Bottom.Size = new System.Drawing.Size(33, 10);
-            this.picWall1Bottom.TabIndex = 53;
-            this.picWall1Bottom.TabStop = false;
-            this.picWall1Bottom.Tag = "wallBottom";
-            // 
-            // picWall2Bottom
-            // 
-            this.picWall2Bottom.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall2Bottom.Location = new System.Drawing.Point(477, 210);
-            this.picWall2Bottom.Name = "picWall2Bottom";
-            this.picWall2Bottom.Size = new System.Drawing.Size(33, 10);
-            this.picWall2Bottom.TabIndex = 54;
-            this.picWall2Bottom.TabStop = false;
-            this.picWall2Bottom.Tag = "wallBottom";
-            // 
-            // picWall3Bottom
-            // 
-            this.picWall3Bottom.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall3Bottom.Location = new System.Drawing.Point(69, 475);
-            this.picWall3Bottom.Name = "picWall3Bottom";
-            this.picWall3Bottom.Size = new System.Drawing.Size(33, 10);
-            this.picWall3Bottom.TabIndex = 55;
-            this.picWall3Bottom.TabStop = false;
-            this.picWall3Bottom.Tag = "wallBottom";
-            // 
-            // picWall4Bottom
-            // 
-            this.picWall4Bottom.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall4Bottom.Location = new System.Drawing.Point(387, 475);
-            this.picWall4Bottom.Name = "picWall4Bottom";
-            this.picWall4Bottom.Size = new System.Drawing.Size(33, 10);
-            this.picWall4Bottom.TabIndex = 56;
-            this.picWall4Bottom.TabStop = false;
-            this.picWall4Bottom.Tag = "wallBottom";
-            // 
-            // picWall1Top
-            // 
-            this.picWall1Top.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall1Top.Location = new System.Drawing.Point(171, 58);
-            this.picWall1Top.Name = "picWall1Top";
-            this.picWall1Top.Size = new System.Drawing.Size(33, 10);
-            this.picWall1Top.TabIndex = 57;
-            this.picWall1Top.TabStop = false;
-            this.picWall1Top.Tag = "wallTop";
-            // 
-            // picWall2Top
-            // 
-            this.picWall2Top.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall2Top.Location = new System.Drawing.Point(477, 58);
-            this.picWall2Top.Name = "picWall2Top";
-            this.picWall2Top.Size = new System.Drawing.Size(33, 10);
-            this.picWall2Top.TabIndex = 58;
-            this.picWall2Top.TabStop = false;
-            this.picWall2Top.Tag = "wallTop";
-            // 
-            // picWall3Top
-            // 
-            this.picWall3Top.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall3Top.Location = new System.Drawing.Point(69, 323);
-            this.picWall3Top.Name = "picWall3Top";
-            this.picWall3Top.Size = new System.Drawing.Size(33, 10);
-            this.picWall3Top.TabIndex = 59;
-            this.picWall3Top.TabStop = false;
-            this.picWall3Top.Tag = "wallTop";
-            // 
-            // picWall4Top
-            // 
-            this.picWall4Top.BackColor = System.Drawing.Color.MidnightBlue;
-            this.picWall4Top.Location = new System.Drawing.Point(387, 323);
-            this.picWall4Top.Name = "picWall4Top";
-            this.picWall4Top.Size = new System.Drawing.Size(33, 10);
-            this.picWall4Top.TabIndex = 60;
-            this.picWall4Top.TabStop = false;
-            this.picWall4Top.Tag = "wallTop";
             // 
             // PacManForm
             // 
@@ -916,7 +916,7 @@
             this.Controls.Add(this.picPacman);
             this.Controls.Add(this.picPinkGhost);
             this.Controls.Add(this.picYellowGhost);
-            this.Controls.Add(this.picRedGhost);
+            this.Controls.Add(this.picUgandanKnuckles);
             this.Controls.Add(this.picWall2);
             this.Controls.Add(this.picWall4);
             this.Controls.Add(this.picWall3);
@@ -928,6 +928,22 @@
             this.Load += new System.EventHandler(this.PacManForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
+            ((System.ComponentModel.ISupportInitialize)(this.picWall4Top)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall3Top)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall2Top)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall1Top)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall4Bottom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall3Bottom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall2Bottom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall1Bottom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall2Right)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall4Right)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall3Right)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall1Right)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall2Left)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall4Left)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall3Left)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picWall1Left)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWallTop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWallLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWallBottom)).EndInit();
@@ -967,27 +983,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.picPacman)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPinkGhost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picYellowGhost)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRedGhost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUgandanKnuckles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall1Left)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall3Left)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall4Left)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall2Left)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall1Right)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall3Right)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall4Right)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall2Right)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall1Bottom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall2Bottom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall3Bottom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall4Bottom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall1Top)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall2Top)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall3Top)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picWall4Top)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -999,7 +999,7 @@
         private System.Windows.Forms.PictureBox picWall3;
         private System.Windows.Forms.PictureBox picWall4;
         private System.Windows.Forms.PictureBox picWall2;
-        private System.Windows.Forms.PictureBox picRedGhost;
+        private System.Windows.Forms.PictureBox picUgandanKnuckles;
         private System.Windows.Forms.PictureBox picYellowGhost;
         private System.Windows.Forms.PictureBox picPinkGhost;
         private System.Windows.Forms.PictureBox picPacman;

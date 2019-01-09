@@ -153,24 +153,24 @@ namespace PacMan
             //player movements code end
 
             //moving the ghosts and bumping with the walls
-            picRedGhost.Left += ghost1;
+            picUgandanKnuckles.Left += ghost1;
             picYellowGhost.Left += ghost2;
 
             //if the red ghost hits the wall then reverse speed
-            if (picRedGhost.Bounds.IntersectsWith(picWall1.Bounds))
+            if (picUgandanKnuckles.Bounds.IntersectsWith(picWall1.Bounds))
             {
                 ghost1 = -ghost1;
             }
             //if the red ghost hits the wall then reverse speed
-            if (picRedGhost.Bounds.IntersectsWith(picWall2.Bounds))
+            if (picUgandanKnuckles.Bounds.IntersectsWith(picWall2.Bounds))
             {
                 ghost1 = -ghost1;
             }
-            if (picRedGhost.Bounds.IntersectsWith(picWall3.Bounds))
+            if (picUgandanKnuckles.Bounds.IntersectsWith(picWall3.Bounds))
             {
                 ghost1 = -ghost1;
             }
-            if (picRedGhost.Bounds.IntersectsWith(picWall4.Bounds))
+            if (picUgandanKnuckles.Bounds.IntersectsWith(picWall4.Bounds))
             {
                 ghost1 = -ghost1;
             }
@@ -232,9 +232,10 @@ namespace PacMan
                     }
                     if (score == 30)
                     {
+                        this.lblScore.Text = ("Score: 30");
                         picPacman.Left = 0;
                         picPacman.Top = 25;
-                        lblGameOver.Text = "YOU WIN!";
+                        lblGameOver.Text = ("YOU WIN!");
                         lblGameOver.Show();
                         tmrTimer.Stop();
                         picPacman.Hide();
@@ -356,8 +357,8 @@ namespace PacMan
             Console.WriteLine("Populating listOfPictureBoxes with each picturebox");
             //populating the list with all the coins
             t.Abort();
-            PopulateList();
             BackgroundMusic.Play();
+            PopulateList();
         }
 
         public void SplashStart()

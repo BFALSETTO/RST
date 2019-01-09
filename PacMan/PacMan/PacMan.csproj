@@ -188,5 +188,14 @@
   <ItemGroup>
     <None Include="Resources\zachup.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ghost11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ghost2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ghost21.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
