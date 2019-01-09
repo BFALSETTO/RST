@@ -65,12 +65,8 @@ namespace PacMan
             //if the right arrow key is pressed:
             if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
             {
-<<<<<<< HEAD
                 Console.WriteLine("***Keys." + e.KeyCode + " is pressed");
-=======
                 Console.WriteLine("***Keys.Right is pressed");
-
->>>>>>> 12c05efc610ebffc45446753a746aed3c7710c67
                 goRight = true;
                 picPacman.Image = Properties.Resources.zachright;
             }
