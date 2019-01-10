@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//need threading for Thread.Sleep for my splash screen
+//need threading for Thread.Sleep for splash screen
 using System.Threading;
 //need media for SoundPlayer
 using System.Media;
@@ -17,6 +17,7 @@ namespace PacMan
     public partial class PacManForm : Form
     {
         List<PictureBox> listOfPictureBoxes = new List<PictureBox>();
+        List<PictureBox> listAllOtherObjects = new List<PictureBox>();
 
         //create the sound player
         private SoundPlayer BackgroundMusic;
@@ -213,6 +214,10 @@ namespace PacMan
                         picMute.Hide();
                         picUnmute.Hide();
                         BackgroundMusic.Stop();
+                        //foreach (PictureBox tmpPictureBox in this.PictureBoxes)
+                        {
+                            
+                        }
 
                         //for (int counter = 0)
                         while (listOfPictureBoxes.Count() > 0)
@@ -378,6 +383,7 @@ namespace PacMan
             listOfPictureBoxes.Add(picCoin8);
             listOfPictureBoxes.Add(picCoin9);
             listOfPictureBoxes.Add(picCoin10);
+
             listOfPictureBoxes.Add(picCoin11);
             listOfPictureBoxes.Add(picCoin12);
             listOfPictureBoxes.Add(picCoin12);
@@ -388,6 +394,7 @@ namespace PacMan
             listOfPictureBoxes.Add(picCoin18);
             listOfPictureBoxes.Add(picCoin19);
             listOfPictureBoxes.Add(picCoin20);
+
             listOfPictureBoxes.Add(picCoin21);
             listOfPictureBoxes.Add(picCoin22);
             listOfPictureBoxes.Add(picCoin23);
@@ -398,6 +405,41 @@ namespace PacMan
             listOfPictureBoxes.Add(picCoin28);
             listOfPictureBoxes.Add(picCoin29);
             listOfPictureBoxes.Add(picCoin30);
+        }
+
+        private void PopulateAllOtherObjects()
+        {
+            //add all the walls
+            listAllOtherObjects.Add(picWall1);
+            listAllOtherObjects.Add(picWall2);
+            listAllOtherObjects.Add(picWall3);
+            listAllOtherObjects.Add(picWall4);
+
+            //add each walls boundaries
+
+            //first wall
+            listAllOtherObjects.Add(picWall1Top);
+            listAllOtherObjects.Add(picWall1Right);
+            listAllOtherObjects.Add(picWall1Bottom);
+            listAllOtherObjects.Add(picWall1Left);
+
+            //second wall
+            listAllOtherObjects.Add(picWall2Top);
+            listAllOtherObjects.Add(picWall2Right);
+            listAllOtherObjects.Add(picWall2Bottom);
+            listAllOtherObjects.Add(picWall2Left);
+
+            //third wall
+            listAllOtherObjects.Add(picWall3Top);
+            listAllOtherObjects.Add(picWall3Right);
+            listAllOtherObjects.Add(picWall3Bottom);
+            listAllOtherObjects.Add(picWall3Left);
+
+            //fourth wall
+            listAllOtherObjects.Add(picWall4Top);
+            listAllOtherObjects.Add(picWall4Right);
+            listAllOtherObjects.Add(picWall4Bottom);
+            listAllOtherObjects.Add(picWall4Left);
         }
     }
 }

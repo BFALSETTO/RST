@@ -380,6 +380,7 @@
             this.picWallRight.TabIndex = 41;
             this.picWallRight.TabStop = false;
             this.picWallRight.Tag = "noMansLandRight";
+            this.picWallRight.Visible = false;
             // 
             // picMute
             // 
