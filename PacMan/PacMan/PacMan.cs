@@ -16,7 +16,7 @@ namespace PacMan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PacManForm());
+            Application.Run(new frmMenu());
         }
     }
 }

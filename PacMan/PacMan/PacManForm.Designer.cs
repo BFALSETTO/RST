@@ -1,6 +1,6 @@
 ﻿namespace PacMan
 {
-    partial class PacManForm
+    partial class frmPacMan
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PacManForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPacMan));
             this.lblScore = new System.Windows.Forms.Label();
             this.lblGameOver = new System.Windows.Forms.Label();
             this.tmrTimer = new System.Windows.Forms.Timer(this.components);
@@ -86,13 +86,14 @@
             this.picCoin21 = new System.Windows.Forms.PictureBox();
             this.picCoin27 = new System.Windows.Forms.PictureBox();
             this.picPacman = new System.Windows.Forms.PictureBox();
-            this.picPinkGhost = new System.Windows.Forms.PictureBox();
+            this.picUgandanKnuckles2 = new System.Windows.Forms.PictureBox();
             this.picYellowGhost = new System.Windows.Forms.PictureBox();
-            this.picUgandanKnuckles = new System.Windows.Forms.PictureBox();
+            this.picUgandanKnuckles1 = new System.Windows.Forms.PictureBox();
             this.picWall2 = new System.Windows.Forms.PictureBox();
             this.picWall4 = new System.Windows.Forms.PictureBox();
             this.picWall3 = new System.Windows.Forms.PictureBox();
             this.picWall1 = new System.Windows.Forms.PictureBox();
+            this.lblTransition = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picWall4Top)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3Top)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2Top)).BeginInit();
@@ -146,9 +147,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCoin21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCoin27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPacman)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPinkGhost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUgandanKnuckles2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picYellowGhost)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUgandanKnuckles)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUgandanKnuckles1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
@@ -183,7 +184,7 @@
             // 
             this.tmrTimer.Enabled = true;
             this.tmrTimer.Interval = 20;
-            this.tmrTimer.Tick += new System.EventHandler(this.timer1_Tick);
+            this.tmrTimer.Tick += new System.EventHandler(this.tmrTimer_Tick);
             // 
             // picWall4Top
             // 
@@ -778,21 +779,20 @@
             this.picPacman.TabIndex = 7;
             this.picPacman.TabStop = false;
             // 
-            // picPinkGhost
+            // picUgandanKnuckles2
             // 
-            this.picPinkGhost.BackColor = System.Drawing.Color.Transparent;
-            this.picPinkGhost.Image = global::PacMan.Properties.Resources.ghost21;
-            this.picPinkGhost.Location = new System.Drawing.Point(426, 383);
-            this.picPinkGhost.Name = "picPinkGhost";
-            this.picPinkGhost.Size = new System.Drawing.Size(36, 38);
-            this.picPinkGhost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPinkGhost.TabIndex = 6;
-            this.picPinkGhost.TabStop = false;
-            this.picPinkGhost.Tag = "ghost";
+            this.picUgandanKnuckles2.BackColor = System.Drawing.Color.Transparent;
+            this.picUgandanKnuckles2.Image = global::PacMan.Properties.Resources.ghost21;
+            this.picUgandanKnuckles2.Location = new System.Drawing.Point(426, 383);
+            this.picUgandanKnuckles2.Name = "picUgandanKnuckles2";
+            this.picUgandanKnuckles2.Size = new System.Drawing.Size(36, 38);
+            this.picUgandanKnuckles2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUgandanKnuckles2.TabIndex = 6;
+            this.picUgandanKnuckles2.TabStop = false;
+            this.picUgandanKnuckles2.Tag = "ghost";
             // 
             // picYellowGhost
             // 
-            this.picYellowGhost.Enabled = false;
             this.picYellowGhost.Image = global::PacMan.Properties.Resources.yellow_guy;
             this.picYellowGhost.Location = new System.Drawing.Point(108, 383);
             this.picYellowGhost.Name = "picYellowGhost";
@@ -802,17 +802,17 @@
             this.picYellowGhost.TabStop = false;
             this.picYellowGhost.Tag = "ghost";
             // 
-            // picUgandanKnuckles
+            // picUgandanKnuckles1
             // 
-            this.picUgandanKnuckles.BackColor = System.Drawing.Color.Transparent;
-            this.picUgandanKnuckles.Image = global::PacMan.Properties.Resources.ghost1;
-            this.picUgandanKnuckles.Location = new System.Drawing.Point(210, 116);
-            this.picUgandanKnuckles.Name = "picUgandanKnuckles";
-            this.picUgandanKnuckles.Size = new System.Drawing.Size(36, 38);
-            this.picUgandanKnuckles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picUgandanKnuckles.TabIndex = 4;
-            this.picUgandanKnuckles.TabStop = false;
-            this.picUgandanKnuckles.Tag = "ghost";
+            this.picUgandanKnuckles1.BackColor = System.Drawing.Color.Transparent;
+            this.picUgandanKnuckles1.Image = global::PacMan.Properties.Resources.ghost1;
+            this.picUgandanKnuckles1.Location = new System.Drawing.Point(210, 116);
+            this.picUgandanKnuckles1.Name = "picUgandanKnuckles1";
+            this.picUgandanKnuckles1.Size = new System.Drawing.Size(36, 38);
+            this.picUgandanKnuckles1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picUgandanKnuckles1.TabIndex = 4;
+            this.picUgandanKnuckles1.TabStop = false;
+            this.picUgandanKnuckles1.Tag = "ghost";
             // 
             // picWall2
             // 
@@ -854,12 +854,26 @@
             this.picWall1.TabStop = false;
             this.picWall1.Tag = "wall";
             // 
-            // PacManForm
+            // lblTransition
+            // 
+            this.lblTransition.AutoSize = true;
+            this.lblTransition.BackColor = System.Drawing.Color.Transparent;
+            this.lblTransition.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransition.ForeColor = System.Drawing.Color.Yellow;
+            this.lblTransition.Location = new System.Drawing.Point(206, 250);
+            this.lblTransition.Name = "lblTransition";
+            this.lblTransition.Size = new System.Drawing.Size(196, 31);
+            this.lblTransition.TabIndex = 61;
+            this.lblTransition.Text = "Loading Menu";
+            this.lblTransition.Visible = false;
+            // 
+            // frmPacMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(609, 531);
+            this.Controls.Add(this.lblTransition);
             this.Controls.Add(this.picWall4Top);
             this.Controls.Add(this.picWall3Top);
             this.Controls.Add(this.picWall2Top);
@@ -915,15 +929,15 @@
             this.Controls.Add(this.picCoin21);
             this.Controls.Add(this.picCoin27);
             this.Controls.Add(this.picPacman);
-            this.Controls.Add(this.picPinkGhost);
+            this.Controls.Add(this.picUgandanKnuckles2);
             this.Controls.Add(this.picYellowGhost);
-            this.Controls.Add(this.picUgandanKnuckles);
+            this.Controls.Add(this.picUgandanKnuckles1);
             this.Controls.Add(this.picWall2);
             this.Controls.Add(this.picWall4);
             this.Controls.Add(this.picWall3);
             this.Controls.Add(this.picWall1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "PacManForm";
+            this.Name = "frmPacMan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PACMAN";
             this.Load += new System.EventHandler(this.PacManForm_Load);
@@ -982,9 +996,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCoin21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCoin27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPacman)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPinkGhost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUgandanKnuckles2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picYellowGhost)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUgandanKnuckles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picUgandanKnuckles1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).EndInit();
@@ -1000,9 +1014,9 @@
         private System.Windows.Forms.PictureBox picWall3;
         private System.Windows.Forms.PictureBox picWall4;
         private System.Windows.Forms.PictureBox picWall2;
-        private System.Windows.Forms.PictureBox picUgandanKnuckles;
+        private System.Windows.Forms.PictureBox picUgandanKnuckles1;
         private System.Windows.Forms.PictureBox picYellowGhost;
-        private System.Windows.Forms.PictureBox picPinkGhost;
+        private System.Windows.Forms.PictureBox picUgandanKnuckles2;
         private System.Windows.Forms.PictureBox picPacman;
         private System.Windows.Forms.PictureBox picCoin27;
         private System.Windows.Forms.PictureBox picCoin21;
@@ -1059,6 +1073,7 @@
         private System.Windows.Forms.PictureBox picWall2Top;
         private System.Windows.Forms.PictureBox picWall3Top;
         private System.Windows.Forms.PictureBox picWall4Top;
+        private System.Windows.Forms.Label lblTransition;
     }
 }
 
