@@ -14,8 +14,9 @@ using System.Media;
 
 namespace PacMan
 {
-    public partial class PacManForm : Form
+    public partial class frmPacMan : Form
     {
+        Form frmMenu;
         List<PictureBox> listOfPictureBoxes = new List<PictureBox>();
         List<PictureBox> listAllOtherObjects = new List<PictureBox>();
 
@@ -23,7 +24,7 @@ namespace PacMan
         private SoundPlayer BackgroundMusic;
 
         //delcare and initialize variables
-        bool goUp = false, goDown = false, goLeft = false, goRight = false;
+        bool goUp = false, goDown = false, goLeft = false, goRight = false, playerControllsEnabled = true;
 
         int speed = 8;
 
@@ -38,7 +39,7 @@ namespace PacMan
         //score variable
         int score = 0;
 
-        public PacManForm()
+        public frmPacMan()
         {
             InitializeComponent();
             
@@ -51,39 +52,42 @@ namespace PacMan
 
         private void keyisdown(object sender, KeyEventArgs e)
         {
-            Console.WriteLine("***keyisdown called");
-
-            //if the left arrow key is pressed:
-            if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
+            if (playerControllsEnabled == true)
             {
-                Console.WriteLine("***Keys." + e.KeyCode + " is pressed");
-                //set goLeft = true
-                goLeft = true;
-                //change the image to the pacman moving left
-                picPacman.Image = Properties.Resources.zachleft;
-            }
+                Console.WriteLine("***keyisdown called");
 
-            //if the right arrow key is pressed:
-            if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
-            {
-                Console.WriteLine("***Keys." + e.KeyCode + " is pressed");
-                Console.WriteLine("***Keys.Right is pressed");
-                goRight = true;
-                picPacman.Image = Properties.Resources.zachright;
-            }
+                //if the left arrow key is pressed:
+                if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
+                {
+                    Console.WriteLine("***Keys." + e.KeyCode + " is pressed");
+                    //set goLeft = true
+                    goLeft = true;
+                    //change the image to the pacman moving left
+                    picPacman.Image = Properties.Resources.zachleft;
+                }
 
-            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
-            {
-                Console.WriteLine("***Keys." + e.KeyCode + " is pressed");
-                goUp = true;
-                picPacman.Image = Properties.Resources.zachup;
-            }
+                //if the right arrow key is pressed:
+                if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
+                {
+                    Console.WriteLine("***Keys." + e.KeyCode + " is pressed");
+                    Console.WriteLine("***Keys.Right is pressed");
+                    goRight = true;
+                    picPacman.Image = Properties.Resources.zachright;
+                }
 
-            if (e.KeyCode == Keys.Down|| e.KeyCode == Keys.S)
-            {
-                Console.WriteLine("***Keys." + e.KeyCode + " is pressed");
-                goDown = true;
-                picPacman.Image = Properties.Resources.zachdown;
+                if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
+                {
+                    Console.WriteLine("***Keys." + e.KeyCode + " is pressed");
+                    goUp = true;
+                    picPacman.Image = Properties.Resources.zachup;
+                }
+
+                if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S)
+                {
+                    Console.WriteLine("***Keys." + e.KeyCode + " is pressed");
+                    goDown = true;
+                    picPacman.Image = Properties.Resources.zachdown;
+                }
             }
         }
 
@@ -124,7 +128,7 @@ namespace PacMan
             picMute.Show();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void tmrTimer_Tick(object sender, EventArgs e)
         {
             //Console.WriteLine("***timer1_Tick called");
             //show the score on the board
@@ -154,24 +158,24 @@ namespace PacMan
             //player movements code end
 
             //moving the ghosts and bumping with the walls
-            picUgandanKnuckles.Left += ghost1;
+            picUgandanKnuckles1.Left += ghost1;
             picYellowGhost.Left += ghost2;
 
             //if the red ghost hits the wall then reverse speed
-            if (picUgandanKnuckles.Bounds.IntersectsWith(picWall1.Bounds))
+            if (picUgandanKnuckles1.Bounds.IntersectsWith(picWall1.Bounds))
             {
                 ghost1 = -ghost1;
             }
             //if the red ghost hits the wall then reverse speed
-            if (picUgandanKnuckles.Bounds.IntersectsWith(picWall2.Bounds))
+            if (picUgandanKnuckles1.Bounds.IntersectsWith(picWall2.Bounds))
             {
                 ghost1 = -ghost1;
             }
-            if (picUgandanKnuckles.Bounds.IntersectsWith(picWall3.Bounds))
+            if (picUgandanKnuckles1.Bounds.IntersectsWith(picWall3.Bounds))
             {
                 ghost1 = -ghost1;
             }
-            if (picUgandanKnuckles.Bounds.IntersectsWith(picWall4.Bounds))
+            if (picUgandanKnuckles1.Bounds.IntersectsWith(picWall4.Bounds))
             {
                 ghost1 = -ghost1;
             }
@@ -214,12 +218,7 @@ namespace PacMan
                         picMute.Hide();
                         picUnmute.Hide();
                         BackgroundMusic.Stop();
-                        //foreach (PictureBox tmpPictureBox in this.PictureBoxes)
-                        {
-                            
-                        }
 
-                        //for (int counter = 0)
                         while (listOfPictureBoxes.Count() > 0)
                         {
                             string tmpPicString;
@@ -234,26 +233,55 @@ namespace PacMan
                         }
                         Thread.Sleep(200);
                         picCoin13.Hide();
-                    }
-                    if (score == 30)
-                    {
-                        this.lblScore.Text = ("Score: 30");
-                        picPacman.Left = 0;
-                        picPacman.Top = 25;
-                        lblGameOver.Text = ("YOU WIN!");
-                        lblGameOver.Show();
-                        tmrTimer.Stop();
-                        picPacman.Hide();
-                        picMute.Hide();
-                        picUnmute.Hide();
-                        BackgroundMusic.Stop();
+                        lblTransition.Show();
+                        Thread.Sleep(3000);
+                        frmMenu = new Form();
+                        frmMenu.ShowDialog();
+                        this.Close();
                     }
                 }
-                if (atag is PictureBox && atag.Tag == "coin")
+                if (score == 30)
                 {
-                    //checking to see if the player hits the picturebox then add score
-                    if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
+                    int indexToRemove;
+                    Random rndNumGen = new Random();
+
+                    this.lblScore.Text = ("Score: 30");
+                    picPacman.Left = 0;
+                    picPacman.Hide();
+                    picPacman.Top = 25;
+                    lblGameOver.Text = ("YOU WIN!");
+                    lblGameOver.Show();
+                    playerControllsEnabled = false;
+                    picMute.Hide();
+                    picUnmute.Hide();
+                    BackgroundMusic.Stop();
+                    while (listAllOtherObjects.Count() > 0)
                     {
+                        string tmpPicString;
+                        PictureBox tmpPicBox;
+                        indexToRemove = rndNumGen.Next(0, listAllOtherObjects.Count());
+                        Console.WriteLine("Removing at index " + indexToRemove);
+                        tmpPicBox = listAllOtherObjects.ElementAt(indexToRemove);
+                        tmpPicString = tmpPicBox.Name;
+                        Console.WriteLine("Name of picture to be removed: " + tmpPicString);
+                        tmpPicBox.Hide();
+                        Console.WriteLine("Hiding " + tmpPicBox);
+                        listAllOtherObjects.RemoveAt(indexToRemove);
+                        Console.WriteLine("Removing " + tmpPicBox);
+                    }
+                    lblTransition.Show();
+                    Thread.Sleep(3000);
+                    Form frmPacMan = new frmMenu();
+                    this.Hide();
+                    frmPacMan.ShowDialog();
+                    this.Close();
+                }
+            }
+                if (atag is PictureBox && atag.Tag == "coin")
+                    {
+                        //checking to see if the player hits the picturebox then add score
+                        if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
+                        {
                         //remove the point
                         this.Controls.Remove(atag);
                         //add to the score
@@ -264,20 +292,20 @@ namespace PacMan
                         Console.WriteLine("***listOfPictureBoxes.Count is " + listOfPictureBoxes.Count());                        
 
                     }
-                }
-                if (atag is PictureBox && atag.Tag == "noMansLandTop")
-                {
+                        }
+                    if (atag is PictureBox && atag.Tag == "noMansLandTop")
+                    {
                     if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
                     {
                         picPacman.Top += speed;
                     }
-                }
-                if (atag is PictureBox && atag.Tag == "noMansLandRight")
-                {
-                    if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
-                    {
-                        picPacman.Left -= speed;
                     }
+                    if (atag is PictureBox && atag.Tag == "noMansLandRight")
+                    {
+                        if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
+                        {
+                        picPacman.Left -= speed;
+                        }
                 }
                 if (atag is PictureBox && atag.Tag == "noMansLandBottom")
                 {
@@ -324,20 +352,20 @@ namespace PacMan
             }//end the for loop for checking walls, points and ghosts
 
             //ghost 3 going crazy here
-            picPinkGhost.Left += ghost3x;
-            picPinkGhost.Top += ghost3y;
+            picUgandanKnuckles2.Left += ghost3x;
+            picUgandanKnuckles2.Top += ghost3y;
 
-            if (picPinkGhost.Left < 1 ||
-                picPinkGhost.Left + picPinkGhost.Width > ClientSize.Width - 2 ||
-                (picPinkGhost.Bounds.IntersectsWith(picWall1.Bounds)) ||
-                (picPinkGhost.Bounds.IntersectsWith(picWall2.Bounds)) ||
-                (picPinkGhost.Bounds.IntersectsWith(picWall3.Bounds)) ||
-                (picPinkGhost.Bounds.IntersectsWith(picWall4.Bounds))
+            if (picUgandanKnuckles2.Left < 1 ||
+                picUgandanKnuckles2.Left + picUgandanKnuckles2.Width > ClientSize.Width - 2 ||
+                (picUgandanKnuckles2.Bounds.IntersectsWith(picWall1.Bounds)) ||
+                (picUgandanKnuckles2.Bounds.IntersectsWith(picWall2.Bounds)) ||
+                (picUgandanKnuckles2.Bounds.IntersectsWith(picWall3.Bounds)) ||
+                (picUgandanKnuckles2.Bounds.IntersectsWith(picWall4.Bounds))
                 )
             {
                 ghost3x = -ghost3x;
             }
-            if (picPinkGhost.Top < 1 || picPinkGhost.Top + picPinkGhost.Height > ClientSize.Height - 2)
+            if (picUgandanKnuckles2.Top < 1 || picUgandanKnuckles2.Top + picUgandanKnuckles2.Height > ClientSize.Height - 2)
             {
                 ghost3y = -ghost3y;
             }
@@ -346,29 +374,9 @@ namespace PacMan
 
         private void PacManForm_Load(object sender, EventArgs e)
         {
-            Thread t = new Thread(new ThreadStart(SplashStart));
-            t.Start();
-            Console.WriteLine("Waiting for 5 seconds");
-            Thread.Sleep(1000);
-            Console.WriteLine("Waiting for 4 seconds");
-            Thread.Sleep(1000);
-            Console.WriteLine("Waiting for 3 seconds");
-            Thread.Sleep(1000);
-            Console.WriteLine("Waiting for 2 seconds");
-            Thread.Sleep(1000);
-            Console.WriteLine("Waiting for 1 second");
-            Thread.Sleep(1000);
-            Console.WriteLine("Loading main menu");
-            Console.WriteLine("Populating listOfPictureBoxes with each picturebox");
-            //populating the list with all the coins
-            t.Abort();
             BackgroundMusic.Play();
             PopulateList();
-        }
-
-        public void SplashStart()
-        {
-            Application.Run(new frmSplashScreen());
+            PopulateAllOtherObjects();
         }
 
         public void PopulateList()
@@ -415,7 +423,7 @@ namespace PacMan
             listAllOtherObjects.Add(picWall3);
             listAllOtherObjects.Add(picWall4);
 
-            //add each walls boundaries
+            //add each wall's boundaries
 
             //first wall
             listAllOtherObjects.Add(picWall1Top);
@@ -440,6 +448,11 @@ namespace PacMan
             listAllOtherObjects.Add(picWall4Right);
             listAllOtherObjects.Add(picWall4Bottom);
             listAllOtherObjects.Add(picWall4Left);
+
+            //add each ghost
+            listAllOtherObjects.Add(picYellowGhost);
+            listAllOtherObjects.Add(picUgandanKnuckles1);
+            listAllOtherObjects.Add(picUgandanKnuckles2);
         }
     }
 }

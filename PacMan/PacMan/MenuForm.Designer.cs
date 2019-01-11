@@ -61,6 +61,7 @@
             this.btnLevel1.TabIndex = 1;
             this.btnLevel1.Text = "Level 1";
             this.btnLevel1.UseVisualStyleBackColor = false;
+            this.btnLevel1.Click += new System.EventHandler(this.btnLevel1_Click);
             // 
             // btnLevel2
             // 
@@ -118,7 +119,9 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
