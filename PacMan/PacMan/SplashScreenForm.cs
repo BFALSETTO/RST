@@ -26,5 +26,13 @@ namespace PacMan
             Console.WriteLine("Form Loaded");
             Sound.Play();
         }
+
+        private void NextForm()
+        {
+            Form MenuForm = new frmMenu();
+            this.Hide();
+            MenuForm.ShowDialog();
+            this.Close();
+        }
     }
 }

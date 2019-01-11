@@ -940,7 +940,7 @@
             this.Name = "frmPacMan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PACMAN";
-            this.Load += new System.EventHandler(this.PacManForm_Load);
+            //this.Load += new System.EventHandler(this.PacManForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.keyisup);
             ((System.ComponentModel.ISupportInitialize)(this.picWall4Top)).EndInit();

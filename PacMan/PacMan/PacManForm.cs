@@ -276,9 +276,9 @@ namespace PacMan
                     frmPacMan.ShowDialog();
                     this.Close();
                 }
-            }
+            
                 if (atag is PictureBox && atag.Tag == "coin")
-                    {
+                {
                         //checking to see if the player hits the picturebox then add score
                         if (((PictureBox)atag).Bounds.IntersectsWith(picPacman.Bounds))
                         {
@@ -291,7 +291,7 @@ namespace PacMan
                         listOfPictureBoxes.Remove((PictureBox)atag);
                         Console.WriteLine("***listOfPictureBoxes.Count is " + listOfPictureBoxes.Count());                        
 
-                    }
+                }
                         }
                     if (atag is PictureBox && atag.Tag == "noMansLandTop")
                     {
